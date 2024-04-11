@@ -1,0 +1,29 @@
+function calculate() {
+    var angle = document.getElementById("angle").value;
+    var radians = angle * (Math.PI / 180); // Convert degrees to radians
+    var sin = Math.sin(radians);
+    var cos = Math.cos(radians);
+    var tan = Math.tan(radians);
+    var sec = 1 / cos;
+    var cosec = 1 / sin;
+    var cot = 1 / tan;
+    var asin = Math.asin(sin);
+    var acos = Math.acos(cos);
+    var atan = Math.atan(tan);
+    var asec = Math.acos(1 / sec);
+    var acosec = Math.asin(1 / cosec);
+    var acot = Math.atan(1 / cot);
+    var result = "<p>(sin(x)): " + sin.toFixed(4) + "</p>";
+    result += "<p>(cos(x)): " + cos.toFixed(4) + "</p>";
+    result += "<p>(tan(x)): " + tan.toFixed(4) + "</p>";
+    result += "<p>(sec(x)): " + sec.toFixed(4) + "</p>";
+    result += "<p>(cosec(x)): " + cosec.toFixed(4) + "</p>";
+    result += "<p>(cot(x)): " + cot.toFixed(4) + "</p>";
+    result += "<p>(sin<sup>-1</sup>(x)): " + asin.toFixed(4) + "</p>";
+    result += "<p>(cos<sup>-1</sup>(x)): " + acos.toFixed(4) + "</p>";
+    result += "<p>(tan<sup>-1</sup>(x)): " + atan.toFixed(4) + "</p>";
+    result += "<p>(sec<sup>-1</sup>(x)): " + asec.toFixed(4) + "</p>";
+    result += "<p>(cosec<sup>-1</sup>(x)): " + acosec.toFixed(4) + "</p>";
+    result += "<p>(cot<sup>-1</sup>(x)): " + acot.toFixed(4) + "</p>";
+    document.getElementById("result").innerHTML = result;
+}
